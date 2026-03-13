@@ -1,0 +1,16 @@
+[package]
+name = "reach-core"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tonic = "0.12"
+prost = "0.13"
+tokio = { version = "1", features = ["full"] }
+tokio-stream = "0.1"
+chrono = "0.4"
+
+[build-dependencies]
+tonic-build = "0.12"
