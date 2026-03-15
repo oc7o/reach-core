@@ -11,6 +11,7 @@ prost = "0.13"
 tokio = { version = "1", features = ["full"] }
 tokio-stream = "0.1"
 chrono = "0.4"
+mavlink = { version = "0.17", features = ["ardupilotmega"] }
 
 [build-dependencies]
 tonic-build = "0.12"
