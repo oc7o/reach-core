@@ -10,10 +10,14 @@ Rust companion-computer service for the **REACH** autonomous drone platform. Bri
 
 ## Running
 
+Configure the Pixhawk serial device and baud rate via `SERIAL_URL` in [`src/main.rs`](src/main.rs) (defaults to `serial:/dev/ttyACM0:57600`).
+
 ```bash
 git submodule update --init --recursive
 cargo run --release
 ```
+
+> **Security note:** The gRPC server listens on `0.0.0.0:50051` over plaintext, unauthenticated HTTP/2 and exposes flight-critical RPCs (`Arm`, `Disarm`, `SendRCOverride`). Run it only over a trusted private link or VPN.
 
 ## Related Repositories
 
